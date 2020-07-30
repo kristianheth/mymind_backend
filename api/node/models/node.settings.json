@@ -36,6 +36,11 @@
     "parent": {
       "model": "node",
       "via": "children"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "nodes"
     }
   }
 }
