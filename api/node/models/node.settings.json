@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nodes",
+  "info": {
+    "name": "Node"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Category",
+        "Link",
+        "Attachment"
+      ]
+    },
+    "CategoryName": {
+      "type": "string"
+    },
+    "LinkName": {
+      "type": "string"
+    },
+    "LinkUrl": {
+      "type": "string"
+    },
+    "File": {
+      "type": "text"
+    },
+    "children": {
+      "collection": "node",
+      "via": "parent"
+    },
+    "parent": {
+      "model": "node",
+      "via": "children"
+    }
+  }
+}
